@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaquires.css" />
+
+    <title>DOCTYPE</title>
+  </head>
+  <body>
+    <div id="notification" style="display: none">
+      <button id="close-btn">&times;</button>
+      <div style="display: flex; align-items: center">
+        <!-- Add your GitHub PNG image here -->
+        <img id="github-logo" src="assets/github.png" alt="GitHub Logo" />
+        <p id="notification-text"></p>
+      </div>
+    </div>
+    <nav id="desktop-nav">
+      <div class="logo">Profile</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Joe Doe</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="assets/1906581316768059392-photoaidcom-cropped.png" alt="" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello I'm</p>
+        <h1 class="title">Dorna Raj Gyawali</h1>
+        <p class="section__text__p2"><b>Software Enginner</b></p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('404.html')"
+          >
+            View Resume
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="assets/linkedin.png"
+            alt="Linkdein Profile"
+            class="icon"
+            onclick="location.href='https://linkedin.com/in/dorna-gyawali/'"
+          />
+          <img
+            src="assets/github.png"
+            alt="Github Profile"
+            class="icon"
+            onclick="location.href='https://github.com/drona-gyawali'"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Who Am I</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img src="assets/Screenshot from 2025-05-05 19-12-37.png" alt="about-pic" class="about-pic" />
+        </div>
+        <div class="about-details-containers">
+          <div class="about-containers">
+            <div class="details-containers">
+              <img
+                src="assets/experience.png"
+                alt="experience icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>2+ years <br />Software Enginner</p>
+            </div>
+            <div class="details-containers">
+              <img
+                src="assets/education.png"
+                alt="education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>Computer Science. Bachelors Degree(ongoing)</p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              I am a first-year <b>Computer Science</b> undergraduate at
+              Tribhuvan University, Nepal, with a strong passion for backend
+              development and open-source. I work mainly with Python, C, C++,
+              and JavaScript, and I enjoy building secure REST APIs using
+              Django, Node js, FastAPI, Redis, Celery, and more. I’m currently
+              preparing for <b>GSoC 2025</b> and actively contribute to projects
+              like Open Library, BuffaLogs and Open Food Facts. I also love
+              solving DSA problems and experimenting with performance-focused
+              tools on Linux.
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="assets/arrow.png"
+        alt="arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section>
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+      <div class="experience-details-containers">
+        <div class="about-containers">
+          <div class="details-containers">
+            <h2 class="experience-sub-title">Frontend Technology</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="assets/checkmark.png"
+                  alt="experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>React</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="assets/checkmark.png"
+                  alt="experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Next.js</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="assets/checkmark.png"
+                  alt="experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Node.js</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="assets/checkmark.png"
+                  alt="experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Vue.js</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="assets/checkmark.png"
+                  alt="experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Tailwind CSS</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="assets/checkmark.png"
+                  alt="experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Javascript/Typescript</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-containers">
+            <h2 class="experience-sub-title">Backend Technology</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="assets/checkmark.png"
+                  alt="experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Django</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="assets/checkmark.png"
+                  alt="experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Express.js</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="assets/checkmark.png"
+                  alt="experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>FastAPi</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="assets/checkmark.png"
+                  alt="experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>System Design</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="assets/checkmark.png"
+                  alt="experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>DBMS</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="assets/checkmark.png"
+                  alt="experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Git</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="assets/arrow.png"
+        alt="arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-containers">
+        <div class="about-containers">
+          <div class="details-containers color-container">
+            <div class="article-container">
+              <img
+                src="assets/Screenshot from 2025-05-05 18-38-17.png"
+                alt=" Thoughts "
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Thoughts</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/drona-gyawali/thoughts'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='404.html'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-containers color-container">
+            <div class="article-container">
+              <img
+                src="assets/support-system.png"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Supportix</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/drona-gyawali/Supportix'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='404.html'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-containers color-container">
+            <div class="article-container">
+              <img
+                src="assets/images.png"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">
+              Investor Analytics
+            </h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/drona-gyawali/Smart-Investor-Analytics'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='404.html'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="assets/arrow.png"
+        alt="arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get In Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="assets/email.png"
+            alt="email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p>
+            <a href="mailto:dronarajgyawali@gmail.com">Email</a>
+          </p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="assets/linkedin.png"
+            alt="linkdein icon"
+            class="icon contact-icon"
+          />
+          <p>
+            <a href="https://www.linkedin.com/in/dorna-gyawali/">Linkdein</a>
+          </p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="assets/github.png"
+            alt="github icon"
+            class="icon contact-icon"
+          />
+          <p>
+            <a href="https://github.com/drona-gyawali">Github</a>
+          </p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="assets/discord-round-black-icon.png"
+            alt="discord icon"
+            class="icon contact-icon"
+          />
+          <p>
+            <a href="https://discord.gg/7JaUjHsw">Discord</a>
+          </p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="assets/medium-circle-black-logo-16645.png"
+            alt="medium icon"
+            class="icon contact-icon"
+          />
+          <p>
+            <a href="https://medium.com/@dronarajgyawali">Medium</a>
+          </p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>
+        Copyright &#169; <span id="year"></span> Drona Raj Gyawali. All Rights
+        Reserved.
+      </p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
