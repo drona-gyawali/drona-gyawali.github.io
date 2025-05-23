@@ -114,3 +114,45 @@ window.onload = async function() {
     });
   };
 
+
+  function getFingerprint() {
+    return {
+      userAgentLength: navigator.userAgent.length,
+      screenWidth: screen.width,
+      screenHeight: screen.height,
+      colorDepth: screen.colorDepth,
+      timezoneOffset: new Date().getTimezoneOffset()
+    };
+  }
+
+  function euclideanDistance(fp1, fp2) {
+    const keys = Object.keys(fp1);
+    let sum = 0;
+    for (let key of keys) {
+      sum += Math.pow(fp1[key] - fp2[key], 2);
+    }
+    return Math.sqrt(sum);
+  }
+
+  function isNewUser(newFp, existingFps, threshold = 10) {
+    for (let fp of existingFps) {
+      const dist = euclideanDistance(newFp, fp);
+      if (dist < threshold) return false; // similar user
+    }
+    return true; // new user
+  }
+
+  // Get existing fingerprints and count from LocalStorage
+  let existingFps = JSON.parse(localStorage.getItem("fingerprints") || "[]");
+  let viewCount = parseInt(localStorage.getItem("viewCount") || "0");
+
+  const currentFp = getFingerprint();
+
+  if (isNewUser(currentFp, existingFps)) {
+    existingFps.push(currentFp);
+    viewCount++;
+    localStorage.setItem("fingerprints", JSON.stringify(existingFps));
+    localStorage.setItem("viewCount", viewCount.toString());
+  }
+
+  document.getElementById("view-count").innerText = viewCount;
