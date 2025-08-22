@@ -1,0 +1,94 @@
+/* 📱 Mobile responsiveness */
+@media (max-width: 768px) {
+  .nav-home {
+    flex-direction: row;
+    gap: 15px;
+    padding: 10px 0;
+  }
+
+  .hero {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .hero img {
+    width: 180px;
+    margin-top: -60px;
+  }
+
+  .intro {
+    margin: 30px auto;
+    padding: 0 10px;
+  }
+
+  .intro h1 {
+    font-size: 1.8rem;
+  }
+
+  .intro p {
+    font-size: 1rem;
+  }
+
+  .Experience {
+    padding: 1rem;
+    margin-left: 0;
+  }
+
+  .Experience h1 {
+    font-size: 1.5rem;
+  }
+
+  .exp1 h2 {
+    font-size: 1.1rem;
+  }
+
+  .merged-work a {
+    padding: 1rem;
+    margin: 0.5rem auto;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .project-card h3 {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .tech-stack img {
+    width: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero img {
+    width: 140px;
+    margin-top: -50px;
+  }
+
+  .intro h1 {
+    font-size: 1.5rem;
+  }
+
+  .Experience h1 {
+    font-size: 1.3rem;
+  }
+
+  .exp1 h2 {
+    font-size: 1rem;
+  }
+
+  .hero-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-links a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-home a {
+    font-size: 16px;
+  }
+}

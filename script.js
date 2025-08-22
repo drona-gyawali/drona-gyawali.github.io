@@ -1,158 +1,48 @@
-function toggleMenu() {
-    const menu = document.querySelector(".menu-links");
-    const icon = document.querySelector(".hamburger-icon");
-    menu.classList.toggle("open");
-    icon.classList.toggle("open");
+const input = document.getElementById('no-type-input');
+const user_api = "https://api.github.com/users/drona-gyawali"
+
+ document.getElementById('email').addEventListener("click", () => {
+    const to = "dronarajgyawali@gmail.com";
+    const subject = "Hi there";
+    const body = "I wanted to ask you about ...";
+    const url = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(to)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    window.open(url, "_blank", "noopener");
+  });
+
+
+
+async function fetch_profile() {
+  try {
+    const response = await fetch(user_api);
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.log("Error fetching profile:", error);
+    return null;
+  }
 }
 
-const yearSpan = document.getElementById('year');
-const currentYear = new Date().getFullYear();
-yearSpan.textContent = currentYear;
-
-window.onload = async function() {
-    const username = 'drona-gyawali';
-    const notification = document.getElementById('notification');
-    const notificationText = document.getElementById('notification-text');
-    const closeBtn = document.getElementById('close-btn');
-  
-    let mergedPRs = [];
-    let openPRs = [];
-    let commits = [];
-  
-    try {
-      // Fetch merged PRs
-      const mergedResponse = await fetch(`https://api.github.com/search/issues?q=type:pr+author:${username}+is:merged&sort=updated&order=desc`);
-      const mergedData = await mergedResponse.json();
-      if (!mergedData.items) {
-        throw new Error(`GitHub API error (merged PRs): ${mergedData.message || 'No items returned'}`);
-      }
-      mergedPRs = mergedData.items.map(pr => pr.title);
-
-  
-      // Fetch open PRs
-      const openResponse = await fetch(`https://api.github.com/search/issues?q=type:pr+author:${username}+is:open&sort=updated&order=desc`);
-      const openData = await openResponse.json();
-      openPRs = openData.items.map(pr => pr.title);
-  
-      // Fetch commits (latest push events)
-      const commitResponse = await fetch(`https://api.github.com/users/${username}/events`);
-      const commitData = await commitResponse.json();
-      commits = commitData.filter(event => event.type === 'PushEvent')
-                          .map(event => event.payload.commits[0].message);
-  
-      // Function to show popup message and store already shown
-      function showMessage(message, key) {
-        // Check if the message has already been shown using localStorage
-        if (localStorage.getItem(key)) {
-          return; // If it's already shown, don't display it again
-        }
-  
-        // Mark the message as shown by storing in localStorage
-        localStorage.setItem(key, 'true');
-  
-        notificationText.textContent = message;
-        notification.style.display = 'block';
-  
-        setTimeout(() => {
-          notification.style.display = 'none';
-        }, 8000); // Hide after 8 seconds
-      }
-  
-      // Show merged PRs first for 50 seconds
-      let index = 0;
-      if (mergedPRs.length > 0) {
-        showMessage(`Merged PR: "${mergedPRs[index]}"`, `mergedPR-${index}`);
-        index++;
-  
-        setInterval(() => {
-          if (index < mergedPRs.length) {
-            showMessage(`Merged PR: "${mergedPRs[index]}"`, `mergedPR-${index}`);
-            index++;
-          }
-        }, 50000); // Show merged PRs every 50 seconds
-      }
-  
-      // After 20 seconds, show open PRs one by one with 20-second gaps
-      setTimeout(() => {
-        let openIndex = 0;
-        if (openPRs.length > 0) {
-          showMessage(`Open PR: "${openPRs[openIndex]}"`, `openPR-${openIndex}`);
-          openIndex++;
-  
-          setInterval(() => {
-            if (openIndex < openPRs.length) {
-              showMessage(`Open PR: "${openPRs[openIndex]}"`, `openPR-${openIndex}`);
-              openIndex++;
-            }
-          }, 20000); // Show open PRs every 20 seconds
-        }
-      }, 50000); // Wait 50 seconds before starting open PRs
-  
-      // After showing PRs, show commits every 20 seconds
-      setTimeout(() => {
-        let commitIndex = 0;
-        if (commits.length > 0) {
-          showMessage(`Commit: "${commits[commitIndex]}"`, `commit-${commitIndex}`);
-          commitIndex++;
-  
-          setInterval(() => {
-            if (commitIndex < commits.length) {
-              showMessage(`Commit: "${commits[commitIndex]}"`, `commit-${commitIndex}`);
-              commitIndex++;
-            }
-          }, 20000); // Show commits every 20 seconds
-        }
-      }, 100000); // Start showing commits after 100 seconds (50 + 20 + 20)
-  
-    } catch (error) {
-      console.error('Failed to fetch GitHub events', error);
-    }
-  
-    // Close button functionality
-    closeBtn.addEventListener('click', () => {
-      notification.style.display = 'none';
-    });
-  };
-
-
-  function getFingerprint() {
-    return {
-      userAgentLength: navigator.userAgent.length,
-      screenWidth: screen.width,
-      screenHeight: screen.height,
-      colorDepth: screen.colorDepth,
-      timezoneOffset: new Date().getTimezoneOffset()
-    };
+window.addEventListener("DOMContentLoaded", async () => {
+  const user = await fetch_profile();
+  if (user) {
+    document.getElementById("avatar").src = user.avatar_url;
+  } else {
+    document.getElementById("username").textContent = "Failed to load user.";
   }
+});
 
-  function euclideanDistance(fp1, fp2) {
-    const keys = Object.keys(fp1);
-    let sum = 0;
-    for (let key of keys) {
-      sum += Math.pow(fp1[key] - fp2[key], 2);
-    }
-    return Math.sqrt(sum);
+document.addEventListener("contextmenu", (event) => {
+  event.preventDefault();
+})
+
+
+document.addEventListener("keydown", (event) => {
+  if ((event.ctrlKey && event.shiftKey && event.key === "I") ||
+      (event.ctrlKey && event.shiftKey && event.key === "C") ||
+      (event.ctrlKey && event.key === "U") ||
+      (event.key === "F12")) {
+    event.preventDefault();
   }
+});
 
-  function isNewUser(newFp, existingFps, threshold = 10) {
-    for (let fp of existingFps) {
-      const dist = euclideanDistance(newFp, fp);
-      if (dist < threshold) return false; // similar user
-    }
-    return true; // new user
-  }
-
-  // Get existing fingerprints and count from LocalStorage
-  let existingFps = JSON.parse(localStorage.getItem("fingerprints") || "[]");
-  let viewCount = parseInt(localStorage.getItem("viewCount") || "0");
-
-  const currentFp = getFingerprint();
-
-  if (isNewUser(currentFp, existingFps)) {
-    existingFps.push(currentFp);
-    viewCount++;
-    localStorage.setItem("fingerprints", JSON.stringify(existingFps));
-    localStorage.setItem("viewCount", viewCount.toString());
-  }
-
-  document.getElementById("view-count").innerText = viewCount;

@@ -1,455 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaquires.css" />
 
-    <title>Dorna Raj Gyawali - Software Engineer</title>
-  </head>
-  <body>
-    <div id="notification" style="display: none">
-      <button id="close-btn">&times;</button>
-      <div style="display: flex; align-items: center">
-        <!-- Add your GitHub PNG image here -->
-        <img id="github-logo" src="assets/github.png" alt="GitHub Logo" />
-        <p id="notification-text"></p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dorna Raj Gyawali - Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/959e1ecc93.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <nav>
+    <div class="nav-bar">
+      <div class="nav-home">
+        <a href="#"><i class="fa-solid fa-house"></i>Home</a>
+        <a href="#Blogs"><i class="fa-solid fa-blog"></i>Blogs</a>
+        <a href="https://github.com/drona-gyawali"><i class="fa-brands fa-github-alt"></i>Github</a>
+        <a href="#contact"><i class="fa-regular fa-id-badge"></i>Contact</a>
       </div>
     </div>
-    <nav id="desktop-nav">
-      <div class="logo">Profile</div>
-      <div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Dorna Raj Gyawali</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
-      </div>
-    </nav>
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="assets/1906581316768059392-photoaidcom-cropped.png" alt="" />
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello I'm</p>
-        <h1 class="title">Dorna Raj Gyawali</h1>
-        <p class="section__text__p2"><b>Software Enginner</b></p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('assets/Myresume.pdf')"
-          >
-            View Resume
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
-          </button>
-        </div>
-        <div id="socials-container">
-          <img
-            src="assets/linkedin.png"
-            alt="Linkdein Profile"
-            class="icon"
-            onclick="location.href='https://linkedin.com/in/dorna-gyawali/'"
-          />
-          <img
-            src="assets/github.png"
-            alt="Github Profile"
-            class="icon"
-            onclick="location.href='https://github.com/drona-gyawali'"
-          />
-        </div>
-      </div>
-    </section>
-    <section id="about">
-      <p class="section__text__p1">Who Am I</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img src="assets/Screenshot from 2025-05-05 19-12-37.png" alt="about-pic" class="about-pic" />
-        </div>
-        <div class="about-details-containers">
-          <div class="about-containers">
-            <div class="details-containers">
-              <img
-                src="assets/experience.png"
-                alt="experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>2+ years <br />Software Enginner</p>
-            </div>
-            <div class="details-containers">
-              <img
-                src="assets/education.png"
-                alt="education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>Computer Science. Bachelors Degree(ongoing)</p>
-            </div>
-          </div>
-          <div class="text-container">
-            <p>
-              I am a first-year <b>Computer Science</b> undergraduate at
-              Tribhuvan University, Nepal, with a strong passion for backend
-              development and open-source. I work mainly with Python, C, C++,
-              and JavaScript, and I enjoy building secure REST APIs using
-              Django, Node js, FastAPI, Redis, Celery, and more. I’m currently
-              preparing for <b>GSoC 2025</b> and actively contribute to projects
-              like Open Library, BuffaLogs and Open Food Facts. I also love
-              solving DSA problems and experimenting with performance-focused
-              tools on Linux.
-            </p>
-          </div>
-        </div>
-      </div>
-      <img
-        src="assets/arrow.png"
-        alt="arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
-    </section>
-    <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <div class="experience-details-containers">
-        <div class="about-containers">
-          <div class="details-containers">
-            <h2 class="experience-sub-title">Frontend Technology</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="assets/checkmark.png"
-                  alt="experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>React</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="assets/checkmark.png"
-                  alt="experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Next.js</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="assets/checkmark.png"
-                  alt="experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Node.js</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="assets/checkmark.png"
-                  alt="experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Vue.js</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="assets/checkmark.png"
-                  alt="experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Tailwind CSS</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="assets/checkmark.png"
-                  alt="experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Javascript/Typescript</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="details-containers">
-            <h2 class="experience-sub-title">Backend Technology</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="assets/checkmark.png"
-                  alt="experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Django</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="assets/checkmark.png"
-                  alt="experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Express.js</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="assets/checkmark.png"
-                  alt="experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>FastAPi</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="assets/checkmark.png"
-                  alt="experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>System Design</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="assets/checkmark.png"
-                  alt="experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>DBMS</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="assets/checkmark.png"
-                  alt="experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Git</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="assets/arrow.png"
-        alt="arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
-    </section>
-    <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-containers">
-        <div class="about-containers">
-          <div class="details-containers color-container">
-            <div class="article-container">
-              <img
-                src="assets/Thoughts.png"
-                alt=" Thoughts "
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Thoughts</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/drona-gyawali/thoughts'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='404.html'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-containers color-container">
-            <div class="article-container">
-              <img
-                src="assets/supportix.png"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Supportix</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/drona-gyawali/Supportix'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='404.html'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <!-- Advanced security tool for detecting API keys, tokens, and secrets in your codebase -->
+  </nav>
 
-          <div class="details-containers color-container">
-            <div class="article-container">
-              <img
-                src="assets/secret-scanner.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">
-              Secret Scanner
-            </h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/drona-gyawali/secret-scanner'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://marketplace.visualstudio.com/items?itemName=drona-gyawali.secret-scanner-pro'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
+  <section id="hero">
+    <div class="hero">
+      <img id="avatar" src="" alt="profile_pic" />
+      <!-- <h1>Dorna Raj Gyawali</h1> -->
+      <p><b>Software Engineer</b></p>
+      <div class="hero-links">
+        <a href="https://x.com/dornaoffical"><i class="fa-brands fa-x-twitter"></i>Follow</a>
+        <a href="https://www.linkedin.com/in/dorna-gyawali"><i class="fa-brands fa-linkedin-in"></i>Connect</a>
+      </div>
+    </div>
+
+    <div class="intro">
+      <h1>Hi, I'm <span>Dorna Raj Gyawali</span>👋</h1>
+      <p>
+        A passionate Software Engineer who loves turning ideas into impactful products while continuously exploring the magic of code. Currently focused on learning advanced algorithms, systems, and backend technologies to build scalable solutions that truly serve end users.
+      </p>
+    </div>
+
+    <div class="Experience">
+      <h1>Experience</h1>
+      
+      <div class="exp1">
+        <h2>Open Source Contributions</h2>
+        <span id="backend-work-title">Recent Merged Pull Requests</span>
+        
+        <div class="merged-work">
+          <a href="https://github.com/certego/BuffaLogs/pull/263">
+            <i class="fa-solid fa-code-merge"></i>
+            <strong>Refactor Api testcases</strong><br>
+            <small>BuffaLogs #405 - Refactor whole testcase to enhance test speed by 10%</small>
+          </a>
+          <a href="https://github.com/certego/BuffaLogs/pull/263">
+            <i class="fa-solid fa-code-merge"></i>
+            <strong>Dockerized Node.js</strong><br>
+            <small>BuffaLogs #263 - Container orchestration improvement</small>
+          </a>
+          <a href="https://github.com/certego/BuffaLogs/pull/227">
+            <i class="fa-solid fa-code-merge"></i>
+            <strong>Splunk Ingestion Feature</strong><br>
+            <small>BuffaLogs #227 - Enhanced data pipeline integration</small>
+          </a>
+          <a href="https://github.com/internetarchive/openlibrary/pull/10273">
+            <i class="fa-solid fa-code-merge"></i>
+            <strong>Fixed Mutable Class Defaults</strong><br>
+            <small>OpenLibrary - Code quality improvement (RUF012)</small>
+          </a>
+          <a href="https://github.com/openclimatefix/ocf-data-sampler/pull/269">
+            <i class="fa-solid fa-code-merge"></i>
+            <strong>Enhanced Error Messages</strong><br>
+            <small>OCF Data Sampler #269 - Better debugging experience</small>
+          </a>
         </div>
       </div>
-      <img
-        src="assets/arrow.png"
-        alt="arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
-    </section>
-    <section id="contact">
-      <p class="section__text__p1">Get In Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="assets/email.png"
-            alt="email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p>
-            <a href="mailto:dronarajgyawali@gmail.com">Email</a>
-          </p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="assets/linkedin.png"
-            alt="linkdein icon"
-            class="icon contact-icon"
-          />
-          <p>
-            <a href="https://www.linkedin.com/in/dorna-gyawali/">Linkdein</a>
-          </p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="assets/github.png"
-            alt="github icon"
-            class="icon contact-icon"
-          />
-          <p>
-            <a href="https://github.com/drona-gyawali">Github</a>
-          </p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="assets/discord-round-black-icon.png"
-            alt="discord icon"
-            class="icon contact-icon"
-          />
-          <p>
-            <a href="https://discord.gg/7JaUjHsw">Discord</a>
-          </p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="assets/medium-circle-black-logo-16645.png"
-            alt="medium icon"
-            class="icon contact-icon"
-          />
-          <p>
-            <a href="https://medium.com/@dronarajgyawali">Medium</a>
-          </p>
+
+      <div class="exp1">
+        <h2>Personal Projects</h2>
+        <span id="backend-work-title">Full-Stack Backend Solutions</span>
+        
+        <div class="merged-work personal-projects">
+          <a href="https://github.com/drona-gyawali/Linkly" target="_blank">
+            <div class="project-card">
+              <h3>
+                <span class="project-title">FocusTube</span>
+                <span class="tech-stack">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="FastAPI">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="Redis">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker">
+                </span>
+              </h3>
+              <p>FocusTube is a productivity-focused learning platform built on top of YouTube. It helps learners stay focused by organizing content, curating playlists, tracking progress, and offering AI-assisted learning paths turning YouTube into a personalized, distraction-free study tool.</p>
+            </div>
+          </a>
+
+          <a href="https://github.com/drona-gyawali/FocusTube" target="_blank">
+            <div class="project-card">
+              <h3>
+                <span class="project-title">Supportix</span>
+                <span class="tech-stack">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="Redis">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker">
+                </span>
+              </h3>
+              <p>A comprehensive customer relationship management application designed to build and strengthen customer relationships through efficient support and personalized service delivery.</p>
+            </div>
+          </a>
+
+          <a href="https://github.com/drona-gyawali/secret-scanner" target="_blank">
+            <div class="project-card">
+              <h3>
+                <span class="project-title">Secret Scanner</span>
+                <span class="tech-stack">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cmake/cmake-original.svg" alt="CMake">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker">
+                </span>
+              </h3>
+              <p>Advanced security tool that detects hardcoded secrets like API keys and credentials in codebases. Features a high-performance C++ engine with both CLI and VS Code extension interfaces.</p>
+            </div>
+          </a>
         </div>
       </div>
-    </section>
+    </div>
+
+    <div class="Blogs" id="Blogs">
+      <h1>Technical Blogs</h1>
+      <div class="blog-grid">
+        <div class="recent-blogs">
+          <h2>Real Code Doesn't Crash: Why Low-Level Programming Is Built Different</h2>
+          <p>This blog is a deep dive into the philosophy behind real, low-level programming — the kind that powers CPUs, game engines, operating systems, and high-frequency trading platforms.</p>
+          <a href="https://medium.com/@dronarajgyawali/real-code-doesnt-crash-why-low-level-programming-is-built-different-a1ee6fc98a50">Read More →</a>
+        </div>
+        
+        <div class="recent-blogs">
+          <h2>Multiprocessing in Python</h2>
+          <p>Multiprocessing is a powerful module in Python that allows the creation of multiple processes, enabling concurrent execution of tasks. This is especially useful for CPU-bound tasks, where multiple CPU cores can be utilized to improve performance.</p>
+          <a href="https://dronarajgyawali.blogspot.com/2024/10/multiprocessing-in-python.html">Read More →</a>
+        </div>
+        
+        <div class="recent-blogs">
+          <h2>Understanding Mutable Default Arguments in Classes</h2>
+          <p>In Programming, mutable default arguments in classes can lead to unexpected bugs and unintended behavior. This happens because mutable objects, such as lists or dictionaries, are shared across all instances of a class when defined as default values at the class level.</p>
+          <a href="https://dronarajgyawali.blogspot.com/2024/10/multiprocessing-in-python.html">Read More →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact" id="contact">
+      <h1>Get In Touch</h1>
+      <div class="email-us">
+        <input type="email" disabled spellcheck="false" placeholder="dronarajgyawali@gmail.com">
+        <button id="email" type="button" >Email Me</button>
+      </div>
+    </div>
+
     <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-      <p>
-        Copyright &#169; <span id="year"></span> Drona Raj Gyawali. All Rights
-        Reserved.
-      </p>
-      <p>
-        Active Users: <span id="view-count">Loading...</span>
-      </p>
+      <p>Designed and programmed by <span>Dorna Raj Gyawali</span></p>
     </footer>
-    <script src="script.js"></script>
-  </body>
+  </section>
+</body>
+<script src="script.js"></script>
 </html>
