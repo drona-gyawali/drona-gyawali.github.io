@@ -32,6 +32,7 @@ window.addEventListener("DOMContentLoaded", async () => {
   }
 });
 
+
 document.addEventListener("contextmenu", (event) => {
   event.preventDefault();
 })
@@ -46,3 +47,24 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
+
+function toggleMenu() {
+  document.getElementById("nav-links").classList.toggle("show");
+}
+
+
+function toggleMenu() {
+    const nav = document.getElementById('nav-links');
+    const ham = document.querySelector('.hamburger');
+
+    nav.classList.toggle('show');
+    ham.classList.toggle('open');
+
+    if (nav.classList.contains('show')) {
+      ham.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+      document.body.classList.add('no-scroll');
+    } else {
+      ham.innerHTML = '<i class="fa-solid fa-bars"></i>';
+      document.body.classList.remove('no-scroll');
+    }
+  }

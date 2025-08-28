@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dorna Raj Gyawali - Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="mediaquery.css">
+
   <!-- Basic Favicons -->
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png"/>
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png">
@@ -26,15 +28,21 @@
 
 <body>
   <nav>
-    <div class="nav-bar">
-      <div class="nav-home">
-        <a href="#"><i class="fa-solid fa-house"></i>Home</a>
-        <a href="#Blogs"><i class="fa-solid fa-blog"></i>Blogs</a>
-        <a href="https://github.com/drona-gyawali"><i class="fa-brands fa-github-alt"></i>Github</a>
-        <a href="#contact"><i class="fa-regular fa-id-badge"></i>Contact</a>
-      </div>
+  <div class="nav-bar">
+    <img src="favicon_io/android-chrome-192x192.png" id="mobile-img" alt="mobile-img">
+    <div class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+      <i class="fa-solid fa-bars" id="mobile-bar"></i>
     </div>
-  </nav>
+
+    <div class="nav-home" id="nav-links">
+      <a href="#"><i class="fa-solid fa-house"></i> Home</a>
+      <a href="#Blogs"><i class="fa-solid fa-blog"></i> Blogs</a>
+      <a href="https://github.com/drona-gyawali"><i class="fa-brands fa-github-alt"></i> Github</a>
+      <a href="#contact"><i class="fa-regular fa-id-badge"></i> Contact</a>
+    </div>
+  </div>
+</nav>
+
 
   <section id="hero">
     <div class="hero">
@@ -50,7 +58,7 @@
     <div class="intro">
       <h1>Hi, I'm <span>Dorna Raj Gyawali</span>👋</h1>
       <p>
-        A passionate Software Engineer who loves turning ideas into impactful products while continuously exploring the magic of code. Currently focused on learning advanced algorithms, systems, and backend technologies to build scalable solutions that truly serve end users.
+        Passionate Software Engineer, skilled in backend and AI-powered systems, turning ideas into smart, user-friendly solutions while exploring advanced algorithms and scalable technologies
       </p>
     </div>
 
@@ -65,32 +73,32 @@
           <a href="https://github.com/certego/BuffaLogs/pull/263">
             <i class="fa-solid fa-code-merge"></i>
             <strong>Refactor Api testcases</strong><br>
-            <small>BuffaLogs #405 - Refactor whole testcase to enhance test speed by 10%</small>
+            <small id="pr-desc">BuffaLogs #405 - Refactor whole testcase to enhance test speed by 10%</small>
           </a>
           <a href="https://github.com/certego/BuffaLogs/pull/263">
             <i class="fa-solid fa-code-merge"></i>
             <strong>Dockerized Node.js</strong><br>
-            <small>BuffaLogs #263 - Container orchestration improvement</small>
+            <small id="pr-desc">BuffaLogs #263 - Container orchestration improvement</small>
           </a>
           <a href="https://github.com/certego/BuffaLogs/pull/227">
             <i class="fa-solid fa-code-merge"></i>
             <strong>Splunk Ingestion Feature</strong><br>
-            <small>BuffaLogs #227 - Enhanced data pipeline integration</small>
+            <small id="pr-desc">BuffaLogs #227 - Enhanced data pipeline integration</small>
           </a>
           <a href="https://github.com/internetarchive/openlibrary/pull/10273">
             <i class="fa-solid fa-code-merge"></i>
             <strong>Fixed Mutable Class Defaults</strong><br>
-            <small>OpenLibrary - Code quality improvement (RUF012)</small>
+            <small id="pr-desc">OpenLibrary - Code quality improvement (RUF012)</small>
           </a>
           <a href="https://github.com/openclimatefix/ocf-data-sampler/pull/269">
             <i class="fa-solid fa-code-merge"></i>
             <strong>Enhanced Error Messages</strong><br>
-            <small>OCF Data Sampler #269 - Better debugging experience</small>
+            <small id="pr-desc">OCF Data Sampler #269 - Better debugging experience</small>
           </a>
           <a href="https://github.com/certego/BuffaLogs/pull/284">
             <i class="fa-solid fa-code-merge"></i>
             <strong>Advanced alert filtering options</strong><br>
-            <small>Buffalogs #284 - Enhanced alert filtering for better UX</small>
+            <small id="pr-desc">Buffalogs #284 - Enhanced alert filtering for better UX</small>
           </a>
         </div>
       </div>
@@ -197,7 +205,7 @@
     </div>
 
     <footer>
-      <p>Designed and programmed by <span>Dorna Raj Gyawali</span></p>
+      <p>Designed and programmed by <span> Dorna</span></p>
     </footer>
   </section>
 </body>

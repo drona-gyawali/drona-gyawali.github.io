@@ -1,28 +1,75 @@
-/* 📱 Mobile responsiveness */
 @media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 15px;
+    color: #00c896;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 3000;
+    background: transparent;
+    border: none;
+  }
+
   .nav-home {
-    flex-direction: row;
+    flex-direction: column;
+    align-items: flex-start;
     gap: 15px;
-    padding: 10px 0;
+    position: absolute; 
+    top: 60px; 
+    left: 10px;
+    right: 10px;
+    padding: 0 15px; 
+    background: rgba(25,25,25,0.95);
+    border-radius: 8px;
+    overflow: hidden;
+    max-height: 0;        
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    z-index: 2000;
+  }
+
+  .nav-home.show {
+    max-height: 500px;  
+    padding: 10px 15px;
+  }
+
+  .nav-home a {
+    font-size: 16px;
+    padding: 8px 0;
+    color: azure;
+    text-decoration: none;
+  }
+
+  .nav-home a:hover {
+    color: #00c896;
+  }
+
+  #mobile-img {
+    display: block;
+    height: 26px;
+    position: absolute;
+    top: 23px; 
+    left: 40px; 
   }
 
   .hero {
     width: 90%;
+    margin-top: 120px;
     padding: 20px;
   }
 
   .hero img {
-    width: 180px;
+    width: 200px;
     margin-top: -60px;
   }
 
-  .intro {
-    margin: 30px auto;
-    padding: 0 10px;
+  .intro h1 {
+    font-size: 2rem;
   }
 
-  .intro h1 {
-    font-size: 1.8rem;
+  .intro span {
+    font-size: 1.1rem;
   }
 
   .intro p {
@@ -31,22 +78,18 @@
 
   .Experience {
     padding: 1rem;
-    margin-left: 0;
   }
 
-  .Experience h1 {
-    font-size: 1.5rem;
+  .merged-work {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0;
   }
 
-  .exp1 h2 {
-    font-size: 1.1rem;
-  }
-
-  .merged-work a {
-    padding: 1rem;
-    margin: 0.5rem auto;
-    width: 100%;
-    max-width: 100%;
+  .merged-work.personal-projects {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0;
   }
 
   .project-card h3 {
@@ -55,40 +98,70 @@
     gap: 0.5rem;
   }
 
-  .tech-stack img {
-    width: 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero img {
-    width: 140px;
-    margin-top: -50px;
+  .tech-stack {
+    justify-content: flex-start;
   }
 
-  .intro h1 {
-    font-size: 1.5rem;
+  .blog-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
 
-  .Experience h1 {
-    font-size: 1.3rem;
-  }
-
-  .exp1 h2 {
-    font-size: 1rem;
-  }
-
-  .hero-links {
+  .email-us {
     flex-direction: column;
     gap: 10px;
   }
 
-  .hero-links a {
+  .email-us input,
+  .email-us button {
+    border-radius: 8px;
     width: 100%;
-    text-align: center;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .nav-home {
+    gap: 15px;
   }
 
   .nav-home a {
-    font-size: 16px;
+    font-size: 14px;
   }
+
+  .intro h1 {
+    font-size: 1.8rem;
+  }
+
+  .Experience h1,
+  .Blogs h1,
+  .contact h1 {
+    font-size: 1.5rem;
+  }
+
+  .merged-work a {
+    padding: 1rem;
+  }
+
+  .merged-work.personal-projects a {
+    padding: 1.5rem;
+  }
+
+  #pr-desc {
+    margin-top: 2px;
+    display:inline-block;
+    margin-left: 1.9rem;
+  }
+
+  .recent-blogs {
+    padding: 1.5rem;
+  }
+
+
+  footer span {
+    color: #00c896;
+    font-weight:bold;
+  }
+
 }
+

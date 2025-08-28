@@ -46,6 +46,10 @@ body {
   transition: background 0.3s ease, color 0.3s ease;
 }
 
+#mobile-img {
+  display: none;
+}
+
 .nav-home a:hover {
   color: #00c896;
 }
@@ -251,6 +255,12 @@ body {
 .merged-work.personal-projects a {
   display: flex;
   height: 100%;
+}
+
+#pr-desc {
+  margin-top: 2px;
+  display:inline-block;
+  margin-left: 1.9rem;
 }
 
 .merged-work.personal-projects {
@@ -504,115 +514,6 @@ footer p {
 
 footer span {
   color: #00c896;
-  font-weight: 500;
+  font-weight: bold;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .nav-home {
-    gap: 20px;
-    padding: 10px;
-    flex-wrap: wrap;
-  }
-
-  .nav-home a {
-    font-size: 16px;
-  }
-
-  .hero {
-    width: 90%;
-    margin-top: 120px;
-    padding: 20px;
-  }
-
-  .hero img {
-    width: 200px;
-    margin-top: -60px;
-  }
-
-  .intro h1 {
-    font-size: 2rem;
-  }
-
-  .intro span {
-    font-size: 1.1rem;
-  }
-
-  .intro p {
-    font-size: 1rem;
-  }
-
-  .Experience {
-    padding: 1rem;
-  }
-
-  .merged-work {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    padding: 0;
-  }
-
-  .merged-work.personal-projects {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    padding: 0;
-  }
-
-  .project-card h3 {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-  }
-
-  .tech-stack {
-    justify-content: flex-start;
-  }
-
-  .blog-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  .email-us {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .email-us input,
-  .email-us button {
-    border-radius: 8px;
-    width: 100%;
-  }
-}
-
-@media (max-width: 480px) {
-  .nav-home {
-    gap: 15px;
-  }
-
-  .nav-home a {
-    font-size: 14px;
-  }
-
-  .intro h1 {
-    font-size: 1.8rem;
-  }
-
-  .Experience h1,
-  .Blogs h1,
-  .contact h1 {
-    font-size: 1.5rem;
-  }
-
-  .merged-work a {
-    padding: 1rem;
-  }
-
-  .merged-work.personal-projects a {
-    padding: 1.5rem;
-  }
-
-  .recent-blogs {
-    padding: 1.5rem;
-  }
-}
