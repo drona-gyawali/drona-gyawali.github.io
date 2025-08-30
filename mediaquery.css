@@ -92,6 +92,28 @@
     padding: 0;
   }
 
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 0.8rem;
+  }
+
+  .skill-card {
+    padding: 0.8rem;
+  }
+
+  .skill-card img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .skill-info h3 {
+    font-size: 0.9rem;
+  }
+
+  .skill-info p {
+    font-size: 0.7rem;
+  }
+
   .project-card h3 {
     flex-direction: column;
     align-items: flex-start;
