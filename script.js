@@ -1,16 +1,16 @@
-const input = document.getElementById('no-type-input');
-const user_api = "https://api.github.com/users/drona-gyawali"
+const input = document.getElementById("no-type-input");
+const user_api = "https://api.github.com/users/drona-gyawali";
 
- document.getElementById('email').addEventListener("click", () => {
-    const to = "dronarajgyawali@gmail.com";
-    const subject = "Hi there";
-    const body = "I wanted to ask you about ...";
-    const url = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(to)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+document.getElementById("email").addEventListener("click", () => {
+  const to = "dronarajgyawali@gmail.com";
+  const subject = "Hi there";
+  const body = "I wanted to ask you about ...";
+  const url = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
+    to
+  )}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-    window.open(url, "_blank", "noopener");
-  });
-
-
+  window.open(url, "_blank", "noopener");
+});
 
 async function fetch_profile() {
   try {
@@ -32,39 +32,37 @@ window.addEventListener("DOMContentLoaded", async () => {
   }
 });
 
-
 document.addEventListener("contextmenu", (event) => {
   event.preventDefault();
-})
-
+});
 
 document.addEventListener("keydown", (event) => {
-  if ((event.ctrlKey && event.shiftKey && event.key === "I") ||
-      (event.ctrlKey && event.shiftKey && event.key === "C") ||
-      (event.ctrlKey && event.key === "U") ||
-      (event.key === "F12")) {
+  if (
+    (event.ctrlKey && event.shiftKey && event.key === "I") ||
+    (event.ctrlKey && event.shiftKey && event.key === "C") ||
+    (event.ctrlKey && event.key === "U") ||
+    event.key === "F12"
+  ) {
     event.preventDefault();
   }
 });
-
 
 function toggleMenu() {
   document.getElementById("nav-links").classList.toggle("show");
 }
 
-
 function toggleMenu() {
-    const nav = document.getElementById('nav-links');
-    const ham = document.querySelector('.hamburger');
+  const nav = document.getElementById("nav-links");
+  const ham = document.querySelector(".hamburger");
 
-    nav.classList.toggle('show');
-    ham.classList.toggle('open');
+  nav.classList.toggle("show");
+  ham.classList.toggle("open");
 
-    if (nav.classList.contains('show')) {
-      ham.innerHTML = '<i class="fa-solid fa-xmark"></i>';
-      document.body.classList.add('no-scroll');
-    } else {
-      ham.innerHTML = '<i class="fa-solid fa-bars"></i>';
-      document.body.classList.remove('no-scroll');
-    }
+  if (nav.classList.contains("show")) {
+    ham.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+    document.body.classList.add("no-scroll");
+  } else {
+    ham.innerHTML = '<i class="fa-solid fa-bars"></i>';
+    document.body.classList.remove("no-scroll");
   }
+}

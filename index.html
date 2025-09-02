@@ -1,334 +1,515 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drona Raj Gyawali - Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaquery.css" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dorna Raj Gyawali - Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="mediaquery.css">
+    <!-- Basic Favicons -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon_io/favicon-16x16.png"
+    />
+    <link rel="shortcut icon" href="/favicon_io/favicon.ico" />
+    <!-- Android / Chrome icons -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/favicon_io/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="/favicon_io/android-chrome-512x512.png"
+    />
 
-  <!-- Basic Favicons -->
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png"/>
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png">
-  <link rel="shortcut icon" href="/favicon_io/favicon.ico">
-  <!-- Android / Chrome icons -->
-  <link rel="icon" type="image/png" sizes="192x192" href="/favicon_io/android-chrome-192x192.png">
-  <link rel="icon" type="image/png" sizes="512x512" href="/favicon_io/android-chrome-512x512.png">
+    <!-- Apple Touch Icons -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon_io/apple-touch-icon.png"
+    />
 
-<!-- Apple Touch Icons -->
-  <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <!-- Android / PWA -->
+    <link rel="manifest" href="/favicon_io/site.webmanifest" />
+    <meta name="theme-color" content="#ffffff" />
+    <script
+      src="https://kit.fontawesome.com/959e1ecc93.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-  <!-- Android / PWA -->
-  <link rel="manifest" href="/favicon_io/site.webmanifest">
-  <meta name="theme-color" content="#ffffff">
-  <script src="https://kit.fontawesome.com/959e1ecc93.js" crossorigin="anonymous"></script>
+  <body>
+    <nav>
+      <div class="nav-bar">
+        <img
+          src="favicon_io/android-chrome-192x192.png"
+          id="mobile-img"
+          alt="mobile-img"
+        />
+        <div class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+          <i class="fa-solid fa-bars" id="mobile-bar"></i>
+        </div>
 
-</head>
-
-<body>
-  <nav>
-  <div class="nav-bar">
-    <img src="favicon_io/android-chrome-192x192.png" id="mobile-img" alt="mobile-img">
-    <div class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
-      <i class="fa-solid fa-bars" id="mobile-bar"></i>
-    </div>
-
-    <div class="nav-home" id="nav-links">
-      <a href="#"><i class="fa-solid fa-house"></i> Home</a>
-      <a href="#Blogs"><i class="fa-solid fa-blog"></i> Blogs</a>
-      <a href="https://github.com/drona-gyawali"><i class="fa-brands fa-github-alt"></i> Github</a>
-      <a href="#contact"><i class="fa-regular fa-id-badge"></i> Contact</a>
-    </div>
-  </div>
-</nav>
-
-
-  <section id="hero">
-    <div class="hero">
-      <img id="avatar" src="" alt="Profile Img" />
-      <!-- <h1>Dorna Raj Gyawali</h1> -->
-      <p><b>Software Engineer</b></p>
-      <div class="hero-links">
-        <a href="https://x.com/dornaoffical"><i class="fa-brands fa-x-twitter"></i>Follow</a>
-        <a href="https://www.linkedin.com/in/dorna-gyawali"><i class="fa-brands fa-linkedin-in"></i>Connect</a>
+        <div class="nav-home" id="nav-links">
+          <a href="#"><i class="fa-solid fa-house"></i> Home</a>
+          <a href="#Blogs"><i class="fa-solid fa-blog"></i> Blogs</a>
+          <a href="https://github.com/drona-gyawali"
+            ><i class="fa-brands fa-github-alt"></i> Github</a
+          >
+          <a href="#contact"><i class="fa-regular fa-id-badge"></i> Contact</a>
+        </div>
       </div>
-    </div>
+    </nav>
 
-    <div class="intro">
-      <h1>Hi, I'm <span class="typing">Dorna Raj Gyawali</span></h1>
-      <p>
-        Passionate Software Engineer, skilled in backend and AI-powered systems, turning ideas into smart, user-friendly solutions while exploring advanced algorithms and scalable technologies
-      </p>
-    </div>
-
-    <div class="Experience">
-      <h1>Experience</h1>
-      
-      <div class="exp1">
-        <h2>Open Source Contributions</h2>
-        <span id="backend-work-title">Recent Merged Pull Requests</span>
-        
-        <div class="merged-work">
-          <a href="https://github.com/certego/BuffaLogs/pull/263">
-            <i class="fa-solid fa-code-merge"></i>
-            <strong>Refactor Api testcases</strong><br>
-            <small id="pr-desc">BuffaLogs #405 - Refactor whole testcase to enhance test speed by 10%</small>
-          </a>
-          <a href="https://github.com/certego/BuffaLogs/pull/263">
-            <i class="fa-solid fa-code-merge"></i>
-            <strong>Dockerized Node.js</strong><br>
-            <small id="pr-desc">BuffaLogs #263 - Container orchestration improvement</small>
-          </a>
-          <a href="https://github.com/certego/BuffaLogs/pull/227">
-            <i class="fa-solid fa-code-merge"></i>
-            <strong>Splunk Ingestion Feature</strong><br>
-            <small id="pr-desc">BuffaLogs #227 - Enhanced data pipeline integration</small>
-          </a>
-          <a href="https://github.com/internetarchive/openlibrary/pull/10273">
-            <i class="fa-solid fa-code-merge"></i>
-            <strong>Fixed Mutable Class Defaults</strong><br>
-            <small id="pr-desc">OpenLibrary - Code quality improvement (RUF012)</small>
-          </a>
-          <a href="https://github.com/openclimatefix/ocf-data-sampler/pull/269">
-            <i class="fa-solid fa-code-merge"></i>
-            <strong>Enhanced Error Messages</strong><br>
-            <small id="pr-desc">OCF Data Sampler #269 - Better debugging experience</small>
-          </a>
-          <a href="https://github.com/certego/BuffaLogs/pull/284">
-            <i class="fa-solid fa-code-merge"></i>
-            <strong>Advanced alert filtering options</strong><br>
-            <small id="pr-desc">Buffalogs #284 - Enhanced alert filtering for better UX</small>
-          </a>
+    <section id="hero">
+      <div class="hero">
+        <img id="avatar" src="" alt="Profile Img" />
+        <!-- <h1>Dorna Raj Gyawali</h1> -->
+        <p><b>Software Engineer</b></p>
+        <div class="hero-links">
+          <a href="https://x.com/dornaoffical"
+            ><i class="fa-brands fa-x-twitter"></i>Follow</a
+          >
+          <a href="https://www.linkedin.com/in/dorna-gyawali"
+            ><i class="fa-brands fa-linkedin-in"></i>Connect</a
+          >
         </div>
       </div>
 
-      <div class="exp1">
-        <h2>Personal Projects</h2>
-        <span id="backend-work-title">Full-Stack Backend Solutions</span>
-        
-        <div class="merged-work personal-projects">
-          <a href="https://github.com/drona-gyawali/FocusTube" target="_blank">
-            <div class="project-card">
-              <h3>
-                <span class="project-title">FocusTube</span>
-                <span class="tech-stack">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="FastAPI">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="Redis">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker">
-                </span>
-              </h3>
-              <p>FocusTube is a productivity-focused learning platform built on top of YouTube. It helps learners stay focused by organizing content, curating playlists, tracking progress, and offering AI-assisted learning paths turning YouTube into a personalized, distraction-free study tool.</p>
+      <div class="intro">
+        <h1>Hi, I'm <span class="typing">Drona Raj Gyawali</span></h1>
+        <p>
+          Passionate Software Engineer, skilled in backend and AI-powered
+          systems, turning ideas into smart, user-friendly solutions while
+          exploring advanced algorithms and scalable technologies
+        </p>
+      </div>
+
+      <div class="Experience">
+        <h1>Experience</h1>
+
+        <div class="exp1">
+          <h2>Open Source Contributions</h2>
+          <span id="backend-work-title">Recent Merged Pull Requests</span>
+
+          <div class="merged-work">
+            <a href="https://github.com/certego/BuffaLogs/pull/263">
+              <i class="fa-solid fa-code-merge"></i>
+              <strong>Refactor Api testcases</strong><br />
+              <small id="pr-desc"
+                >BuffaLogs #405 - Refactor whole testcase to enhance test speed
+                by 10%</small
+              >
+            </a>
+            <a href="https://github.com/certego/BuffaLogs/pull/263">
+              <i class="fa-solid fa-code-merge"></i>
+              <strong>Dockerized Node.js</strong><br />
+              <small id="pr-desc"
+                >BuffaLogs #263 - Container orchestration improvement</small
+              >
+            </a>
+            <a href="https://github.com/certego/BuffaLogs/pull/227">
+              <i class="fa-solid fa-code-merge"></i>
+              <strong>Splunk Ingestion Feature</strong><br />
+              <small id="pr-desc"
+                >BuffaLogs #227 - Enhanced data pipeline integration</small
+              >
+            </a>
+            <a href="https://github.com/internetarchive/openlibrary/pull/10273">
+              <i class="fa-solid fa-code-merge"></i>
+              <strong>Fixed Mutable Class Defaults</strong><br />
+              <small id="pr-desc"
+                >OpenLibrary - Code quality improvement (RUF012)</small
+              >
+            </a>
+            <a
+              href="https://github.com/openclimatefix/ocf-data-sampler/pull/269"
+            >
+              <i class="fa-solid fa-code-merge"></i>
+              <strong>Enhanced Error Messages</strong><br />
+              <small id="pr-desc"
+                >OCF Data Sampler #269 - Better debugging experience</small
+              >
+            </a>
+            <a href="https://github.com/certego/BuffaLogs/pull/284">
+              <i class="fa-solid fa-code-merge"></i>
+              <strong>Advanced alert filtering options</strong><br />
+              <small id="pr-desc"
+                >Buffalogs #284 - Enhanced alert filtering for better UX</small
+              >
+            </a>
+          </div>
+        </div>
+
+        <div class="exp1">
+          <h2>Personal Projects</h2>
+          <span id="backend-work-title">Full-Stack Backend Solutions</span>
+
+          <div class="merged-work personal-projects">
+            <a
+              href="https://github.com/drona-gyawali/FocusTube"
+              target="_blank"
+            >
+              <div class="project-card">
+                <h3>
+                  <span class="project-title">FocusTube</span>
+                  <span class="tech-stack">
+                    <img
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                      alt="Python"
+                    />
+                    <img
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg"
+                      alt="FastAPI"
+                    />
+                    <img
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg"
+                      alt="Redis"
+                    />
+                    <img
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+                      alt="Docker"
+                    />
+                  </span>
+                </h3>
+                <p>
+                  FocusTube is a productivity-focused learning platform built on
+                  top of YouTube. It helps learners stay focused by organizing
+                  content, curating playlists, tracking progress, and offering
+                  AI-assisted learning paths turning YouTube into a
+                  personalized, distraction-free study tool.
+                </p>
+              </div>
+            </a>
+
+            <a
+              href="https://github.com/drona-gyawali/Supportix"
+              target="_blank"
+            >
+              <div class="project-card">
+                <h3>
+                  <span class="project-title">Supportix</span>
+                  <span class="tech-stack">
+                    <img src="assests/django-svgrepo-com.svg" alt="Django" />
+                    <img
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                      alt="Python"
+                    />
+                    <img
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg"
+                      alt="Redis"
+                    />
+                    <img
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+                      alt="Docker"
+                    />
+                  </span>
+                </h3>
+                <p>
+                  A comprehensive customer relationship management application
+                  designed to build and strengthen customer relationships
+                  through efficient support and personalized service delivery.
+                </p>
+              </div>
+            </a>
+
+            <a
+              href="https://github.com/drona-gyawali/secret-scanner"
+              target="_blank"
+            >
+              <div class="project-card">
+                <h3>
+                  <span class="project-title">Secret Scanner</span>
+                  <span class="tech-stack">
+                    <img
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
+                      alt="C++"
+                    />
+                    <img
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cmake/cmake-original.svg"
+                      alt="CMake"
+                    />
+                    <img
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                      alt="TypeScript"
+                    />
+                    <img
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                      alt="Node.js"
+                    />
+                    <img
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+                      alt="Docker"
+                    />
+                  </span>
+                </h3>
+                <p>
+                  Advanced security tool that detects hardcoded secrets like API
+                  keys and credentials in codebases. Features a high-performance
+                  C++ engine with both CLI and VS Code extension interfaces.
+                </p>
+              </div>
+            </a>
+
+            <a href="https://github.com/drona-gyawali/p1ng" target="_blank">
+              <div class="project-card">
+                <h3>
+                  <span class="project-title">P1ng</span>
+                  <span class="tech-stack">
+                    <img
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                      alt="Python"
+                    />
+                    <img
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg"
+                      alt="FastAPI"
+                    />
+                    <img
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg"
+                      alt="Redis"
+                    />
+                    <img
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+                      alt="Docker"
+                    />
+                  </span>
+                </h3>
+                <p>
+                  A minimalist internet speed tester that delivers raw
+                  performance metrics with no sign-ups or data storage - just
+                  insights
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Education Section -->
+      <div class="exp1 education Experience">
+        <h1>Education</h1>
+        <span id="edu-desc">Academic Background</span>
+        <div class="education-details">
+          <img
+            class="edu-img"
+            src="assests/tribhuvan-university-tu-seeklogo.png"
+            alt="tribhwan_university"
+          />
+          <div class="edu-text">
+            <span class="institute-name">Tribhuwan University, Nepal</span>
+            <div class="stream">
+              <span>Bachelor in Information & Communication Technology</span>
+              <span class="stream-date">2024–present</span>
             </div>
-          </a>
+          </div>
+        </div>
+      </div>
 
-          <a href="https://github.com/drona-gyawali/Supportix" target="_blank">
-            <div class="project-card">
-              <h3>
-                <span class="project-title">Supportix</span>
-                <span class="tech-stack">
-                  <img src='assests/django-svgrepo-com.svg' alt="Django">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="Redis">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker">
-                </span>
-              </h3>
-              <p>A comprehensive customer relationship management application designed to build and strengthen customer relationships through efficient support and personalized service delivery.</p>
+      <!-- Skills Section -->
+      <div class="skills-section exp1 Experience">
+        <h1>Skills</h1>
+        <span id="edu-desc">Engineering Skills & Tools I Use</span>
+
+        <div class="skills-grid">
+          <!-- Skill Card -->
+          <div class="skill-card">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+              alt="Python"
+            />
+            <div class="skill-info">
+              <h3>Python</h3>
             </div>
-          </a>
+          </div>
 
-          <a href="https://github.com/drona-gyawali/secret-scanner" target="_blank">
-            <div class="project-card">
-              <h3>
-                <span class="project-title">Secret Scanner</span>
-                <span class="tech-stack">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cmake/cmake-original.svg" alt="CMake">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker">
-                </span>
-              </h3>
-              <p>Advanced security tool that detects hardcoded secrets like API keys and credentials in codebases. Features a high-performance C++ engine with both CLI and VS Code extension interfaces.</p>
+          <div class="skill-card">
+            <img src="assests/django-svgrepo-com.svg" alt="Django" />
+            <div class="skill-info">
+              <h3>Django</h3>
             </div>
-          </a>
+          </div>
 
-          <a href="https://github.com/drona-gyawali/p1ng" target="_blank">
-            <div class="project-card">
-              <h3>
-                <span class="project-title">P1ng</span>
-                <span class="tech-stack">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="FastAPI">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="Redis">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker">
-                </span>
-              </h3>
-              <p>A minimalist internet speed tester that delivers raw performance metrics with no sign-ups or data storage - just insights</p>
+          <div class="skill-card">
+            <img src="assests/cpp.png" alt="cpp" />
+            <div class="skill-info">
+              <h3>C++</h3>
             </div>
-          </a>
-          
+          </div>
+
+          <div class="skill-card">
+            <img src="assests/postgresql-icon.svg" alt="postgresql" />
+            <div class="skill-info">
+              <h3>Postgresql</h3>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <img src="assests/reactjs-icon.svg" alt="react" />
+            <div class="skill-info">
+              <h3>ReactJS</h3>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <img src="assests/tailwindcss-icon.svg" alt="react" />
+            <div class="skill-info">
+              <h3>Tailwind Css</h3>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <img src="assests/amazon_aws-icon.svg" alt="react" />
+            <div class="skill-info">
+              <h3>AWS</h3>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <img src="assests/elastic-icon.svg" alt="react" />
+            <div class="skill-info">
+              <h3>Elastic Search</h3>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <img src="assests/mongo.png" alt="mongodb" />
+            <div class="skill-info">
+              <h3>MongoDB</h3>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <img src="assests/nodejs.png" alt="nodejs" />
+            <div class="skill-info">
+              <h3>NodeJS</h3>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <img src="assests/rabbitmq.png" alt="rabbitmq" />
+            <div class="skill-info">
+              <h3>RabbitMq</h3>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg"
+              alt="FastAPI"
+            />
+            <div class="skill-info">
+              <h3>FastAPI</h3>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg"
+              alt="Redis"
+            />
+            <div class="skill-info">
+              <h3>Redis</h3>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+              alt="Docker"
+            />
+            <div class="skill-info">
+              <h3>Docker</h3>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <img src="assests/github.svg" alt="GitHub" />
+            <div class="skill-info">
+              <h3>GitHub</h3>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-<!-- Skills Section -->
-<div class="skills-section exp1">
-  <h2>Skills</h2>
-  <span id="backend-work-title">Engineering Skills & Tools I Use</span>
 
-  <div class="skills-grid">
-    <!-- Skill Card -->
-    <div class="skill-card">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
-      <div class="skill-info">
-        <h3>Python</h3>
-      </div>
-    </div>
+      <div class="Blogs" id="Blogs">
+        <h1>Featured Blogs</h1>
+        <div class="blog-grid">
+          <div class="recent-blogs">
+            <h2>Enabling APIs caching in FastApi</h2>
+            <p>
+              If your APIs is growing, chances are you’ve noticed response times
+              creeping up. That’s where Redis comes in. Redis is an in-memory
+              data store that makes caching ridiculously fast. In this guide,
+              I’ll show you the cleanest, most modular way to set up Redis for
+              caching in a FastAPI project.
+            </p>
+            <a
+              href="https://medium.com/@dronarajgyawali/integrating-redis-caching-in-fastapi-the-right-way-edb212183d45"
+              >Read More →</a
+            >
+          </div>
 
-    <div class="skill-card">
-      <img src="assests/django-svgrepo-com.svg" alt="Django">
-      <div class="skill-info">
-        <h3>Django</h3>
-      </div>
-    </div>
+          <div class="recent-blogs">
+            <h2>Multiprocessing in Python</h2>
+            <p>
+              Multiprocessing is a powerful module in Python that allows the
+              creation of multiple processes, enabling concurrent execution of
+              tasks. This is especially useful for CPU-bound tasks, where
+              multiple CPU cores can be utilized to improve performance.
+            </p>
+            <a
+              href="https://dronarajgyawali.blogspot.com/2024/10/multiprocessing-in-python.html"
+              >Read More →</a
+            >
+          </div>
 
-    <div class="skill-card">
-      <img src="assests/cpp.png" alt="cpp">
-      <div class="skill-info">
-        <h3>C++</h3>
-      </div>
-    </div>
-
-    
-     <div class="skill-card">
-      <img src="assests/postgresql-icon.svg" alt="postgresql">
-      <div class="skill-info">
-        <h3>Postgresql</h3>
-      </div>
-    </div>
-
-
-    <div class="skill-card">
-      <img src="assests/reactjs-icon.svg" alt="react">
-      <div class="skill-info">
-        <h3>ReactJS</h3>
-      </div>
-    </div>
-
-    <div class="skill-card">
-      <img src="assests/tailwindcss-icon.svg" alt="react">
-      <div class="skill-info">
-        <h3>Tailwind Css</h3>
-      </div>
-    </div>
-
-     <div class="skill-card">
-      <img src="assests/amazon_aws-icon.svg" alt="react">
-      <div class="skill-info">
-        <h3>AWS</h3>
-      </div>
-    </div>
-
-     <div class="skill-card">
-      <img src="assests/elastic-icon.svg" alt="react">
-      <div class="skill-info">
-        <h3>Elastic Search</h3>
-      </div>
-    </div>
-
-
-
-    <div class="skill-card">
-      <img src="assests/mongo.png" alt="mongodb">
-      <div class="skill-info">
-        <h3>MongoDB</h3>
-      </div>
-    </div>
-
-    <div class="skill-card">
-      <img src="assests/nodejs.png" alt="nodejs">
-      <div class="skill-info">
-        <h3>NodeJS</h3>
-      </div>
-    </div>
-
-
-    <div class="skill-card">
-      <img src="assests/rabbitmq.png" alt="rabbitmq">
-      <div class="skill-info">
-        <h3>RabbitMq</h3>
-      </div>
-    </div>
-
-
-    <div class="skill-card">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="FastAPI">
-      <div class="skill-info">
-        <h3>FastAPI</h3>
-      </div>
-    </div>
-
-    <div class="skill-card">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="Redis">
-      <div class="skill-info">
-        <h3>Redis</h3>
-      </div>
-    </div>
-
-    <div class="skill-card">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker">
-      <div class="skill-info">
-        <h3>Docker</h3>
-      </div>
-    </div>
-
-    <div class="skill-card">
-      <img src="assests/github.svg" alt="GitHub">
-      <div class="skill-info">
-        <h3>GitHub</h3>
-      </div>
-    </div>
-  </div>
-</div>
-
-        
-
-    <div class="Blogs" id="Blogs">
-      <h1>Featured Blogs</h1>
-      <div class="blog-grid">
-        <div class="recent-blogs">
-          <h2>Enabling APIs caching in FastApi</h2>
-          <p>If your APIs is growing, chances are you’ve noticed response times creeping up. That’s where Redis comes in. Redis is an in-memory data store that makes caching ridiculously fast. In this guide, I’ll show you the cleanest, most modular way to set up Redis for caching in a FastAPI project.</p>
-          <a href="https://medium.com/@dronarajgyawali/integrating-redis-caching-in-fastapi-the-right-way-edb212183d45">Read More →</a>
-        </div>
-        
-        <div class="recent-blogs">
-          <h2>Multiprocessing in Python</h2>
-          <p>Multiprocessing is a powerful module in Python that allows the creation of multiple processes, enabling concurrent execution of tasks. This is especially useful for CPU-bound tasks, where multiple CPU cores can be utilized to improve performance.</p>
-          <a href="https://dronarajgyawali.blogspot.com/2024/10/multiprocessing-in-python.html">Read More →</a>
-        </div>
-        
-        <div class="recent-blogs">
-          <h2>Understanding Mutable Default Arguments in Classes</h2>
-          <p>In Programming, mutable default arguments in classes can lead to unexpected bugs and unintended behavior. This happens because mutable objects, such as lists or dictionaries, are shared across all instances of a class when defined as default values at the class level.</p>
-          <a href="https://dronarajgyawali.blogspot.com/2024/10/multiprocessing-in-python.html">Read More →</a>
+          <div class="recent-blogs">
+            <h2>Understanding Mutable Default Arguments in Classes</h2>
+            <p>
+              In Programming, mutable default arguments in classes can lead to
+              unexpected bugs and unintended behavior. This happens because
+              mutable objects, such as lists or dictionaries, are shared across
+              all instances of a class when defined as default values at the
+              class level.
+            </p>
+            <a
+              href="https://dronarajgyawali.blogspot.com/2024/10/multiprocessing-in-python.html"
+              >Read More →</a
+            >
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="contact" id="contact">
-      <h1>Get In Touch</h1>
-      <div class="email-us">
-        <input type="email" disabled spellcheck="false" placeholder="dronarajgyawali@gmail.com">
-        <button id="email" type="button" >Email Me</button>
+      <div class="contact" id="contact">
+        <h1>Get In Touch</h1>
+        <div class="email-us">
+          <input
+            type="email"
+            disabled
+            spellcheck="false"
+            placeholder="dronarajgyawali@gmail.com"
+          />
+          <button id="email" type="button">Email Me</button>
+        </div>
       </div>
-    </div>
 
-    <footer>
-      <p>Designed and programmed by <span> Dorna</span></p>
-    </footer>
-  </section>
-</body>
-<script src="script.js"></script>
+      <footer>
+        <p>Designed and programmed by <span> Drona</span></p>
+      </footer>
+    </section>
+  </body>
+  <script src="script.js"></script>
 </html>

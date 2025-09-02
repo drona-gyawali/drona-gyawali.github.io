@@ -16,23 +16,23 @@
     flex-direction: row;
     align-items: flex-end;
     gap: 15px;
-    position: absolute; 
-    top: 60px; 
+    position: absolute;
+    top: 60px;
     left: 10px;
     right: 10px;
-    padding: 0 15px; 
+    padding: 0 15px;
     background: rgba(255, 255, 255, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(10px);
     border-radius: 12px;
     overflow: hidden;
-    max-height: 0;        
+    max-height: 0;
     transition: max-height 0.4s ease, padding 0.4s ease;
     z-index: 2000;
   }
 
   .nav-home.show {
-    max-height: 500px;  
+    max-height: 500px;
     padding: 10px 15px;
   }
 
@@ -52,8 +52,8 @@
     display: block;
     height: 26px;
     position: absolute;
-    top: 23px; 
-    left: 40px; 
+    top: 23px;
+    left: 40px;
   }
 
   .hero {
@@ -142,7 +142,6 @@
     border-radius: 8px;
     width: 100%;
   }
-
 }
 
 @media (max-width: 480px) {
@@ -164,6 +163,41 @@
     font-size: 1.5rem;
   }
 
+  .education-details {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .edu-text {
+    align-items: center;
+  }
+
+  .stream-date {
+    position: static;
+    margin-top: 0.5rem; /* small gap */
+    left: auto;
+    top: auto;
+  }
+
+  .stream span {
+    color: #ccc;
+    display: block;
+    word-wrap: break-word;
+    white-space: normal;
+    font-size: 0.9rem;
+    color: #ccc;
+    text-align: center;
+    font-size: 0.85rem;
+    font-weight: 500;
+    line-height: 1.3rem;
+    padding: 0 0.5rem;
+  }
+
+  .edu-img {
+    margin-bottom: 0.5rem;
+  }
+
   .merged-work a {
     padding: 1rem;
   }
@@ -174,7 +208,7 @@
 
   #pr-desc {
     margin-top: 2px;
-    display:inline-block;
+    display: inline-block;
     margin-left: 1.9rem;
   }
 
@@ -182,11 +216,8 @@
     padding: 1.5rem;
   }
 
-
   footer span {
     color: #00c896;
-    font-weight:bold;
+    font-weight: bold;
   }
-
 }
-
