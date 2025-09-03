@@ -37,7 +37,7 @@
   }
 
   .nav-home a {
-    font-size: 16px;
+    font-size: 13px;
     padding: 8px 0;
     color: azure;
     text-align: center;
@@ -46,20 +46,33 @@
 
   .nav-home a:hover {
     color: #00c896;
+    text-align: center;
   }
 
   #mobile-img {
     display: block;
-    height: 26px;
+    height: 30px;
+    width: 30px;
+    border: 1px solid;
+    border-radius: 50%;
     position: absolute;
     top: 23px;
-    left: 40px;
+    left: 12px;
   }
 
   .hero {
     width: 90%;
     margin-top: 120px;
     padding: 20px;
+  }
+
+  .intro h1 span.typing {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    top: 10px;
+    animation: typing 3s steps(20, end), blink 0.75s step-end infinite;
   }
 
   .hero img {
@@ -150,11 +163,12 @@
   }
 
   .nav-home a {
-    font-size: 14px;
+    font-size: 10px;
+    text-align: center;
   }
 
   .intro h1 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 
   .Experience h1,
@@ -175,7 +189,7 @@
 
   .stream-date {
     position: static;
-    margin-top: 0.5rem; /* small gap */
+    margin-top: 1.5rem;
     left: auto;
     top: auto;
   }
