@@ -140,6 +140,34 @@
     justify-content: flex-start;
   }
 
+  .project-title {
+    font-weight: bold;
+    flex: 1;
+    min-width: 150px;
+  }
+
+  .tech-tools {
+    font-size: 8px;
+    right: -4px;
+    top: 5px;
+    padding: 2px 4px;
+  }
+
+  .tech-stack img {
+    width: 15px;
+    height: 15px;
+    border-radius: 4px;
+    position: relative;
+    top: 5px;
+    right: -5px;
+    transition: transform 0.2s ease;
+  }
+
+  .tech-stack-logo img {
+    width: 35px;
+    height: 35px;
+  }
+
   .blog-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -183,6 +211,27 @@
     text-align: center;
   }
 
+  .tech-tools {
+    font-size: 7px;
+    right: 2px;
+    top: 5px;
+    padding: 2px 3px;
+  }
+
+  .tech-stack img {
+    width: 15px;
+    height: 15px;
+    border-radius: 4px;
+    position: relative;
+    top: 5px;
+    right: 5px;
+    transition: transform 0.2s ease;
+  }
+
+  .tech-stack-logo img {
+    width: 30px;
+    height: 30px;
+  }
   .edu-text {
     align-items: center;
   }
@@ -233,5 +282,30 @@
   footer span {
     color: #00c896;
     font-weight: bold;
+  }
+}
+
+/* For mobile phones (≤ 480px) */
+@media (max-width: 480px) {
+  .tech-tools {
+    font-size: 7px;
+    right: 2px;
+    top: 5px;
+    padding: 2px 3px;
+  }
+
+  .tech-stack img {
+    width: 15px;
+    height: 15px;
+    border-radius: 4px;
+    position: relative;
+    top: 5px;
+    right: 5px;
+    transition: transform 0.2s ease;
+  }
+
+  .tech-stack-logo img {
+    width: 30px;
+    height: 30px;
   }
 }

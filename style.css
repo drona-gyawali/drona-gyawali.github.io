@@ -418,13 +418,37 @@ body {
 }
 
 .tech-stack img {
-  width: 28px;
-  height: 28px;
+  width: 20px;
+  height: 20px;
   border-radius: 4px;
+  position: relative;
+  top: -22px;
+  right: -60px;
   transition: transform 0.2s ease;
 }
 
-.tech-stack img:hover {
+.tech-tools {
+  font-size: 9px;
+  color: var(--text-white);
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  padding: 3px 5px;
+  position: relative;
+  right: -55px;
+  top: -22px;
+  background: rgba(0, 200, 150, 0.2);
+}
+
+.tech-stack-logo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #0f0e0e;
+  transition: transform 0.2s ease;
+}
+
+.tech-stack img:hover,
+.tech-stack-logo img:hover {
   transform: scale(1.2);
 }
 
