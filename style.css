@@ -428,7 +428,8 @@ body {
 }
 
 .tech-tools {
-  font-size: 9px;
+  font-size: 10px;
+  font-weight: 600;
   color: var(--text-white);
   border: 1px solid var(--primary-color);
   border-radius: 4px;

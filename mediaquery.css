@@ -147,7 +147,7 @@
   }
 
   .tech-tools {
-    font-size: 8px;
+    font-size: 9px;
     right: -4px;
     top: 5px;
     padding: 2px 4px;
@@ -212,7 +212,7 @@
   }
 
   .tech-tools {
-    font-size: 7px;
+    font-size: 9px;
     right: 2px;
     top: 5px;
     padding: 2px 3px;
@@ -285,27 +285,4 @@
   }
 }
 
-/* For mobile phones (≤ 480px) */
-@media (max-width: 480px) {
-  .tech-tools {
-    font-size: 7px;
-    right: 2px;
-    top: 5px;
-    padding: 2px 3px;
-  }
 
-  .tech-stack img {
-    width: 15px;
-    height: 15px;
-    border-radius: 4px;
-    position: relative;
-    top: 5px;
-    right: 5px;
-    transition: transform 0.2s ease;
-  }
-
-  .tech-stack-logo img {
-    width: 30px;
-    height: 30px;
-  }
-}
