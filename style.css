@@ -8,13 +8,11 @@
   --text-secondary: #ccc;
   --text-white: #fff;
   --border-color: #555;
-  --gradient-primary: linear-gradient(
-    90deg,
-    #00c896,
-    #00fff0,
-    #00c896,
-    #00fff0
-  );
+  --gradient-primary: linear-gradient(90deg,
+      #00c896,
+      #00fff0,
+      #00c896,
+      #00fff0);
   --shadow-glow: 0 10px 25px rgba(0, 200, 150, 0.25);
   --transition-fast: 0.3s ease;
   --transition-slow: 0.5s ease;
@@ -25,6 +23,80 @@
   --spacing-md: 1.5rem;
   --spacing-lg: 2rem;
   --spacing-xl: 4rem;
+}
+
+#loader {
+  position: fixed;
+  inset: 0;
+  background: var(--bg-dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  z-index: 9999;
+  transition: opacity 0.5s ease;
+}
+
+/* Rotating logo */
+.logo {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 25px;
+  animation: spin 2s linear infinite;
+  filter: drop-shadow(0 0 10px #ffcc00);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  50% {
+    transform: rotate(180deg) scale(1.1);
+  }
+
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+.message {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+/* Percentage text */
+.percentage {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+  color: var(--primary-color);
+}
+
+/* Progress bar container */
+.progress-container {
+  width: 220px;
+  height: 10px;
+  background: #333;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: var(--shadow-glow);
+}
+
+.progress-bar {
+  width: 0%;
+  height: 100%;
+  background: var(--gradient-primary);
+  transition: width 0.2s ease;
+}
+
+/* Hide loader after done */
+#loader.hidden {
+  opacity: 0;
+  pointer-events: none;
 }
 
 /* Reset and Base Styles */
@@ -44,6 +116,7 @@ body {
   color: var(--text-secondary);
   line-height: 1.6;
 }
+
 
 /* Navigation */
 .nav-bar {
@@ -200,10 +273,12 @@ body {
 }
 
 @keyframes gradientMove {
+
   0%,
   100% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
@@ -222,6 +297,7 @@ body {
   from {
     width: 0ch;
   }
+
   to {
     width: 19ch;
   }
@@ -310,12 +386,10 @@ body {
   left: -100%;
   width: 100%;
   height: 2px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    var(--primary-color),
-    transparent
-  );
+  background: linear-gradient(90deg,
+      transparent,
+      var(--primary-color),
+      transparent);
   transition: left var(--transition-slow);
 }
 
@@ -372,11 +446,9 @@ body {
   right: 0;
   width: 0;
   height: 100%;
-  background: linear-gradient(
-    45deg,
-    rgba(0, 200, 150, 0.1),
-    rgba(0, 200, 150, 0.05)
-  );
+  background: linear-gradient(45deg,
+      rgba(0, 200, 150, 0.1),
+      rgba(0, 200, 150, 0.05));
   transition: width 0.4s ease;
   z-index: -1;
 }
@@ -497,11 +569,9 @@ body {
 
 .skill-card {
   border-radius: var(--border-radius-lg);
-  background: linear-gradient(
-    145deg,
-    rgba(0, 200, 150, 0.05),
-    rgba(0, 200, 150, 0.1)
-  );
+  background: linear-gradient(145deg,
+      rgba(0, 200, 150, 0.05),
+      rgba(0, 200, 150, 0.1));
   padding: var(--spacing-sm);
   position: relative;
   overflow: hidden;
@@ -532,11 +602,9 @@ body {
 
 .skill-card:hover {
   transform: translateY(-6px) scale(1.05);
-  background: linear-gradient(
-    145deg,
-    rgba(0, 200, 150, 0.08),
-    rgba(0, 200, 150, 0.15)
-  );
+  background: linear-gradient(145deg,
+      rgba(0, 200, 150, 0.08),
+      rgba(0, 200, 150, 0.15));
   box-shadow: var(--shadow-glow);
   border-color: var(--primary-color);
 }
@@ -565,11 +633,9 @@ body {
 
 .education-details {
   border-radius: var(--border-radius-lg);
-  background: linear-gradient(
-    145deg,
-    rgba(0, 200, 150, 0.05),
-    rgba(0, 200, 150, 0.1)
-  );
+  background: linear-gradient(145deg,
+      rgba(0, 200, 150, 0.05),
+      rgba(0, 200, 150, 0.1));
   padding: var(--spacing-lg);
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 200, 150, 0.15);
@@ -586,11 +652,9 @@ body {
 .education-details:hover {
   transform: translateY(-5px);
   box-shadow: var(--shadow-glow);
-  background: linear-gradient(
-    145deg,
-    rgba(0, 200, 150, 0.08),
-    rgba(0, 200, 150, 0.15)
-  );
+  background: linear-gradient(145deg,
+      rgba(0, 200, 150, 0.08),
+      rgba(0, 200, 150, 0.15));
   border-color: var(--primary-color);
 }
 
@@ -685,12 +749,10 @@ body {
   content: "";
   position: absolute;
   inset: -2px;
-  background: linear-gradient(
-    45deg,
-    var(--primary-color),
-    transparent,
-    var(--primary-color)
-  );
+  background: linear-gradient(45deg,
+      var(--primary-color),
+      transparent,
+      var(--primary-color));
   border-radius: var(--border-radius-lg);
   z-index: -1;
   opacity: 0;

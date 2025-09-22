@@ -66,3 +66,30 @@ function toggleMenu() {
     document.body.classList.remove("no-scroll");
   }
 }
+
+
+const loader = document.getElementById("loader");
+    const content = document.getElementById("content");
+    const progressBar = document.getElementById("progress-bar");
+    const percentageText = document.getElementById("percentage");
+    let progress = 0;
+
+    const interval = setInterval(() => {
+      progress += Math.random() * 35; // Random increments
+      if(progress > 95) {
+        document.querySelector(".message").textContent = "Request verified sucessfully"
+      }
+      
+      if (progress > 100) progress = 100;
+
+      progressBar.style.width = progress + "%";
+      percentageText.textContent = Math.floor(progress) + "%";
+
+      if (progress === 100) {
+        clearInterval(interval);
+        setTimeout(() => {
+          loader.classList.add("hidden");
+          navbar.classList.add("visible");
+        }, 500);
+      }
+    }, 200);
